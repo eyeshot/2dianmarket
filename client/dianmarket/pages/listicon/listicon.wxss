@@ -1,0 +1,216 @@
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}  
+  
+/*搜索*/  
+.search{  
+  flex: auto;  
+  display: flex;  
+  flex-direction: column;  
+  background: #fff;  
+}  
+.search-bar{  
+
+  align-items: center;   
+  padding: 20rpx;  
+  background: #f4f4f4;  
+  
+  
+}  
+.search-wrap{  
+  position: relative;  
+  flex: auto;   
+  background: #fff;  
+  border-radius: 6rpx;  
+  text-align: center;
+  line-height: 60rpx;
+} 
+
+.search-wrap .icon-search{  
+  display: inline;  
+  padding: auto;
+  line-height: 20rpx;
+
+}  
+.search-wrap  .search-word{  
+  display: inline;  
+  padding: 0 15rpx;  
+  font-size: 11pt;  
+  line-height: 40rpx;
+  color: #999999;
+
+ 
+}  
+  
+/*搜索结果*/  
+.search-result{  
+  flex: auto;  
+  position: relative; 
+}  
+.search-result scroll-view{  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  top: 0;  
+}  
+.result-item{  
+  display: flex;  
+  flex-direction: row;  
+  justify-content: space-between;
+  padding: 20rpx 0 20rpx 0rpx;  
+  border-bottom: 1rpx solid #F5F5F5;  
+  font-size: 14pt;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+}  
+
+.result-item .leftcontent
+{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.result-item .image
+{
+  border-radius: 20rpx; 
+  width: 250rpx;
+  height: 120rpx;
+  text-align: right;
+}
+  
+.result-item .media{  
+  position: absolute;  
+  left: 16rpx;  
+  top: 16rpx;  
+  width: 80rpx;  
+  height: 80rpx;  
+  border-radius: 999rpx;  
+}  
+.result-item .title,  
+.result-item .subtitle{  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
+  white-space: nowrap;  
+}  
+.result-item .title{  
+  margin-bottom: 8rpx;  
+  color: #000;  
+  font-size: 12pt; 
+}  
+
+.result-item .desc{  
+  margin-top:20rpx; 
+  color: #CDC5BF;  
+  font-size: 11pt; 
+}  
+.result-item .subtitle{  
+  color: #808080;  
+  font-size: 24rpx;  
+}  
+.result-item:first-child .subtitle text{  
+  margin-right: 20rpx;  
+}  
+.result-item:not(:first-child) .subtitle text:not(:first-child):before{  
+  content: '/';  
+  margin: 0 8rpx;  
+}  
+.loading{  
+  padding: 10rpx;  
+  text-align: center;  
+  font-size: 11pt;
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;  
+ /* background: url(../../images/icon-loading.png) no-repeat;  */
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.loading.complete:before{  
+  display: none;  
+}  
+
+.addInfo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.addIcon {
+  width: 80rpx;
+  height: 80rpx
+}
+
+.message {
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 10rpx;
+  background-color: #000000;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message .title{  
+  text-align: center;
+  font-size: 28rpx; 
+  line-height: 36rpx;  
+  color: red;
+} 
+
+
+.row-wraparrow
+{
+  width:100%;
+  height:88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  font-size: 32rpx;
+  background: url(https://www.2dian.com/xcx/static/img/arrow-right.png) no-repeat 675rpx center;
+}
+
+.row-wraparrow .label-right
+{
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: left;
+  margin-left: 65rpx;
+}
+
+.save-btn,
+.cancel-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:30rpx; 
+    margin-bottom: 30rpx;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+}
+.save-btn{
+    background-color: #e64340;
+    color:#fff;
+    margin-top:300rpx; 
+}
+button[type="default"]{
+    background-color: #ffffff;
+    color:#000;
+}

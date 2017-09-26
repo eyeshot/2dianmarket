@@ -1,0 +1,8 @@
+
+
+ <view class="result-item" wx:for="{{result}}" wx:key="unique"  
+  data-id="{{item.id}}">  
+    <button bindtap="doAni" data-id="{{index}}">begin{{index}}</button>
+    <view animation="{{source[index]}}" hidden="{{isHidden[index]}}" style="background:red;height:100rpx;width:100rpx" bindtap="viewTap"> </view>
+  
+</view>

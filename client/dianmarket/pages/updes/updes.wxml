@@ -1,0 +1,29 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container">  
+
+ 
+  <view class="form-box">
+    
+
+    <view class="row-wrap-remark">
+        <view class="label">第一步:</view>
+    </view>
+
+    <view class="row-wrap-remark">
+        <view class="des"> 在PC浏览器输入:https://www.2dian.com/xcx/up</view>
+    </view>
+
+    <view class="row-wrap-remark">
+        <view class="label">第二步:</view>
+    </view>
+
+    <view class="row-wrap-remark">
+        <view class="des"> 点击下面扫一扫，扫描PC浏览器中的二维码</view>
+    </view>
+
+    <button type="primary" class="save-btn" bindtap='doScan'>扫一扫登录，上传文件</button>
+    
+    
+   </view>
+</view>

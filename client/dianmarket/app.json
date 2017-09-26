@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/listquan/listquan",
+    "pages/anitest/anitest",
+    "pages/rank/rank",
+    "pages/dialog/dialog",
+    "pages/picker/picker",
+    "pages/input/input",
+    "pages/list/list",
+    "pages/listicon/listicon",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/searchcode/searchcode",
+    "pages/demand/demand",
+    "pages/code/code",
+    "pages/codewrite/codewrite",
+    "pages/filelist/filelist",
+    "pages/downdes/downdes",
+    "pages/updes/updes",
+    "pages/my/my",
+    "pages/myfile/buycodelist/buycodelist",
+    "pages/myfile/pubcodelist/pubcodelist",
+    "pages/myfile/pubmarketlist/pubmarketlist",
+    "pages/myfile/msglist/msglist",
+    "pages/myfile/msgdetail/msgdetail",
+    "pages/myfile/getmoney/getmoney",
+    "pages/myfile/moneylist/moneylist",
+    "pages/myfile/money/money",
+    "pages/myfile/about/about"
+  ],
+  "window": {
+    "navigationBarTextStyle": "#F8F8FF",
+    "navigationBarTitleText": "两点市场",
+    "navigationBarBackgroundColor": "#353535",
+    "backgroundColor": "#353535"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#d55a4a",
+    "borderStyle": "white",
+    "backgroundColor": "#f4f4f4",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "images/pay.png",
+        "selectedIconPath": "images/pay_on.png",
+        "text": "发包"
+      },
+      {
+        "pagePath": "pages/code/code",
+        "iconPath": "images/rank.png",
+        "selectedIconPath": "images/rank_on.png",
+        "text": "代码"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

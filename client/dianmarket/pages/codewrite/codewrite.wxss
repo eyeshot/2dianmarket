@@ -1,0 +1,283 @@
+/* pages/detail/detail.wxss */
+
+.container{  
+ 
+  justify-content: initial;
+} 
+
+.form-box
+{
+  width:100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.colorxing
+{
+  color: red;
+  margin-top: 30rpx;
+  font-size: 36rpx;
+  text-align: center;
+  padding-top: 30rpx;
+}
+
+.contentimg .image
+{
+  
+  width: 230rpx;
+  height: 200rpx;
+  text-align: right;
+  position:absolute;
+}
+
+.contentimg .deletebg
+{
+  position:absolute;
+  opacity:0.5;
+  height:50rpx;
+  width:230rpx;
+  z-index:1;
+  background:#000000;
+  margin-top:150rpx;
+}
+
+.contentimg .delete
+{
+  
+  height:50rpx;
+  width:50rpx;
+  margin-left:90rpx;
+  margin-top:150rpx;
+  position:absolute;
+   z-index:999;
+}
+
+.contentimg .plusimg
+{
+  border-radius: 5rpx; 
+  width: 160rpx;
+  height: 160rpx;
+  text-align: right;
+  border: 2rpx solid #eee;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.contentimg
+{
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  padding-bottom:30rpx;
+} 
+
+.contentimg .itemimg
+{
+  position:relative;
+  width: 230rpx;
+  height: 200rpx;
+  margin-right: 5rpx;
+  margin-top: 5rpx;
+} 
+
+.codeimg
+{
+  border-radius: 5rpx; 
+  width: 60rpx;
+  height: 60rpx;
+  text-align: right;
+  border: 2rpx solid #eee;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+
+.row-wraparrow
+{
+  width:100%;
+  height:88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  font-size: 32rpx;
+  background: url(https://www.2dian.com/xcx/static/img/arrow-right.png) no-repeat 675rpx center;
+}
+
+.row-wraparrow .label-right
+{
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: left;
+  margin-left: 50rpx;
+}
+
+
+.row-wrap
+{
+  width:720rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  font-size: 11pt;
+}
+
+.row-wrap .label
+{
+  width: 200rpx;
+  color: #000;
+}
+
+.row-wrap .label1
+{
+  width: 100rpx;
+  color: #000;
+}
+
+.row-wrap .label2
+{
+  width: 180rpx;
+  color: #000;
+}
+
+.row-wrap .label3
+{
+  width: 250rpx;
+  color: #000;
+}
+
+.row-wrap .label-right
+{
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin-left: 20rpx;
+}
+
+.row-wrap .label-right input
+{
+  height: 100%;
+  font-size: 11pt;
+  padding-right: 30rpx;
+}
+
+.status-box
+{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: left;
+  background-color: #fff;
+}
+
+.status-box .status-label
+{
+  width: 150rpx;
+  height: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #353535;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.status-box .status-label.active
+{
+  color:#e64340;
+  border-bottom: 6rpx solid #e64340;
+}
+
+.save-btn,
+.cancel-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:30rpx; 
+    margin-bottom: 30rpx;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+}
+.save-btn{
+    background-color: #e64340;
+    color:#fff;
+    margin-top: 40rpx
+}
+
+button[type="default"]{
+    background-color: #ffffff;
+    color:#000;
+}
+
+.row-wrap-remark
+{
+  width:95%;
+  height:40rpx;
+  line-height: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  font-size: 32rpx;
+}
+
+
+.row-wrap-follow
+{
+  width:720rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  display: flex;
+  font-size: 11pt;
+}
+
+.row-wrap-follow .label
+{
+  width: 180rpx;
+  color: #000;
+}
+
+.row-wrap-code
+{
+  width:420rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 11pt;
+}
+
+.row-wrap-code .label
+{
+  width: 360rpx;
+  color: #000;
+}
+
+.row-wrap-teaxarea
+{
+  width: 90%;
+    height: 400rpx;
+    flex-shrink:1;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    color: #999;
+    font-size: 11pt;
+    padding: 10px;
+    background: #ffffff;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #eee;
+    border-left: 1rpx solid #eee;
+    border-right: 1rpx solid #eee;
+    border-top: 1rpx solid #eee;
+}

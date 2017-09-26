@@ -1,0 +1,26 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container">  
+
+ 
+  <view class="form-box">
+    
+        <image src='../../../images/money.png' class="row-wrap-img"></image>
+
+
+    <view class="row-wrap-money">
+        <view class='money-label'>¥{{currrentMoney}}</view>
+    </view>
+
+    <view class="row-wrap-remark">
+        <view class='remark-label'>提现资金24小时内直接打入您的微信钱包!</view>
+    </view>
+
+    
+
+    <button type="primary" class="save-btn" data-money='{{currrentMoney}}' bindtap='toGetMoney'>申请提现</button>
+    <button type="default" class="detail-btn" bindtap='moneylist'>收支明细</button>
+    
+    
+   </view>
+</view>

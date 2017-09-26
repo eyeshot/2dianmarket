@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "我的代码",
+  "navigationBarTextStyle": "white"
+}

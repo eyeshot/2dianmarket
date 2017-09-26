@@ -1,0 +1,110 @@
+
+<view class="search">  
+  <view class="search-bar">  
+    <view class="search-wrap" bindtap="toSearchTap">  
+      
+        <icon type="search" size="12" class="icon-search" />  
+        <view class="search-word" bindtap="keywordSearch">搜索</view> 
+    
+    </view>  
+  </view>  
+
+  <view class="search-result">  
+    
+      <view class="result-item" wx:for="{{list}}" wx:key="unique"  data-id="{{item.id}}">  
+        <view class="leftcontent">
+           <image src="{{item.headimg}}" class="header"></image> 
+        </view>  
+
+        <view class="rightcontent"> 
+             <text class="title">{{item.title}}</text>  
+             <text class="desc">{{item.des}}</text>  
+             <view class="contentimg"> 
+                <image src="{{imgItem.img}}" class="image" wx:for="{{item.imglist}}" 
+                wx:for-item="imgItem" wx:key="imgID" wx:for-index="imgindex" bindtap='preImages' 
+                data-id="{{imgindex}}" data-pid="{{index}}"></image>
+             </view>
+
+             <text class="textlabel">类型 : {{item.type}}</text> 
+             <block wx:if="{{item.money == 0}}">
+                <text class="textlabel">金额 : 免费</text> 
+             </block>
+             <block wx:if="{{item.money > 0}}">
+                <text class="textlabel">金额 : {{item.money}}元</text> 
+             </block>
+             <text class="textlabel">状态 : 售卖中</text> 
+
+             <view class="operate"> 
+                <text class="timeline">{{item.writetime}}</text> 
+
+                <view class="operatedetail" >
+                    <view class="operateItem" bindtap="payCheck" data-id="{{item.id}}" data-resid="{{item.resID}}"
+                     data-money="{{item.money}}">
+                       <image src="../../images/icon_cart_selected.png" class="operateitemimg"></image>
+                       <text class="operateitemword">购买</text> 
+                    </view>
+                    <view class="operateItem" data-id="{{item.id}}" data-index="{{index}}" bindtap="doCollect">
+                       <image src="{{collectImgs[index]}}" class="operateitemimg"></image>
+                       <text class="operateitemword">关注</text> 
+                    </view>
+                    <Button class="shareItem" open-type="share">
+                       <image src="../../images/share.png" class="shareitemimg"></image>
+                       <text class="shareitemword">分享</text> 
+                    </Button>
+                </view>
+               
+             </view>
+
+             <view class="comment" wx:if="{{item.bidderlist.length > 0}}"> 
+                <view class="love"> 
+                     <!--
+                     <image src="../../images/rank_on.png" class="lovesign"></image>
+                     -->
+                     <text class="parttake">参与者:</text> 
+                     <view class="loveheader"> 
+                         <image src="{{bidderItem.headimg}}" class="loveimg" 
+                         wx:for="{{item.bidderlist}}" 
+                         wx:for-item="bidderItem"></image> 
+                         
+                     </view>
+                </view>
+                
+             </view>
+              
+        </view>
+      </view>   
+  
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view> 
+   
+  </view>  
+
+  <view class="addInfo">
+  <navigator url="/pages/codewrite/codewrite" hover-class="navigator-hover" 
+  open-type="navigateTo">
+         <image class="addIcon"   src="../../images/ic_add.png"></image>
+  </navigator>
+  </view>
+
+  <view class="partake" hidden="{{isHiddenPart}}"> 
+    <form bindsubmit="savePartData">
+    <view class="modal">
+        <view class="row-wrap-follow">
+            <view class="label">请简单描述您的开发优势</view>
+        </view>
+
+        <view class="row-wrap-teaxarea">
+            <textarea  maxlength="300" name="content" />
+        </view>
+
+        <button type="primary" class="save-btn" formType="submit">提交</button>
+        <button type="default" class="cancel-btn" bindtap="cancelPart">取消</button>
+     </view>   
+     </form>
+  </view>
+
+</view>  
+
+
+

@@ -1,0 +1,60 @@
+
+<view class="search">  
+  <view class="search-bar">  
+    <view class="search-wrap" bindtap="toSearchTap">  
+      
+        <icon type="search" size="12" class="icon-search" />  
+        <view class="search-word" bindtap="keywordSearch">搜索</view> 
+    
+    </view>  
+  </view>  
+
+  <view class="search-result">  
+    
+      <view class="result-item" wx:for="{{list}}" wx:key="unique"  data-id="{{item.id}}">  
+        <view class="leftcontent">
+           <image src="../../../images/logo.jpeg" class="header"></image> 
+        </view>  
+
+        <view class="rightcontent"> 
+             <text class="title">{{item.title}}</text>  
+             <text class="desc">{{item.des}}</text>  
+             <view class="contentimg" > 
+                <image src="{{imgItem.img}}" class="image" wx:for="{{item.imglist}}" 
+                wx:for-item="imgItem" wx:key="imgID" wx:for-index="imgindex" bindtap='preImages' 
+                data-id="{{imgindex}}" data-pid="{{index}}"></image>
+             </view>
+
+             <text class="textlabel">类型 : {{item.type}}</text> 
+             <text class="textlabel">金额 : {{item.money}}元</text> 
+             <text class="textlabel">状态 : 售卖中</text> 
+
+             <view class="operate"> 
+                <text class="timeline">{{item.writetime}}</text> 
+
+                <view class="operatedetail" >
+                   
+                    <view class="operateItem" data-id="{{item.id}}" data-index="{{index}}" bindtap="toDownload">
+                       <image src="../../../images/link.png" class="operateitemimg"></image>
+                       <text class="operateitemword">下载</text> 
+                    </view>
+                    
+                </view>
+               
+             </view>
+              
+        </view>
+      </view>   
+  
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view> 
+   
+  </view>  
+
+
+
+</view>  
+
+
+

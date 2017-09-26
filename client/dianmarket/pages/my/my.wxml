@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view  class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  
+  <view class="row-wraparrow1" bindtap="toMoney"> 
+             <view class="label">我的钱包</view>
+  </view>
+
+  <view class="row-wraparrow2" bindtap="toBuyList"> 
+             <view class="label">我的购买</view>
+  </view>
+
+  <view class="row-wraparrow2" bindtap="toPubMarket"> 
+             <view class="label">我的发包</view>
+  </view>
+
+  <view class="row-wraparrow2" bindtap="toPubCode"> 
+             <view class="label">我的代码</view>
+  </view>
+
+  <view class="row-wraparrow2" bindtap="toMsgList">   
+             <view class="label">我的消息</view>
+             <block wx:if="{{haveMsg}}">
+             <image src="https://www.2dian.com/xcx/static/img/bullet_red.png" class='itemimg'></image>
+             </block>
+  </view>
+
+  <Button class="row-wraparrowBtn" open-type="share" > 
+
+  <view style="label">分享给朋友</view>
+             
+  </Button>
+
+  <view class="row-line" >  
+  </view>
+
+  <view class="row-wraparrow2" bindtap="toAbout"> 
+             <view class="label">关于两点市场</view>
+  </view>
+  
+</view>

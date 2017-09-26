@@ -1,0 +1,63 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container">  
+
+ 
+<form bindsubmit="saveData">
+  <view class="form-box">
+
+   <view class="row-wrap">
+        <view class="label1"><text class="colorxing">*</text>标题:</view>
+        <view class="label-right"><input class="input" name="title" 
+        value=""/></view>
+  </view>
+
+  <picker bindchange="bindTypePickerChange" value="{{index}}" range="{{itemtype}}">
+    <view class="row-wrap"> 
+             <view class="label"><text class="colorxing">*</text>代码类型:</view>
+             <view class="label-right">{{itemtypeVaule}}</view>
+    </view>
+   </picker> 
+
+  <view class="row-wrap">
+        <view class="label2"><text class="colorxing">*</text>出售金额:</view>
+        <view class="label-right"><input class="input" name="money" type="number"  placeholder="输入0即代表免费"
+        value=""/></view>
+  </view>
+
+  <view class="row-wrap-follow">
+        <view class="label"><text class="colorxing">*</text>功能示例图:</view>
+  </view>
+
+  <view class="contentimg"> 
+                <view class="itemimg" wx:for="{{tempFilePaths}}" wx:key="tempFilePaths[index]">
+                     <image src="{{tempFilePaths[index]}}" class="image"></image>
+                     <view class="deletebg" data-id="{{index}}"> </view>
+                     <image src="../../images/delete.png" data-id="{{index}}" class="delete" bindtap="deletepic"></image>
+                </view>
+                
+                <image src="../../images/plus.png" class="plusimg" bindtap="selectpic"></image>
+  </view>
+
+  <view class="row-wrap-code">
+        <view class="label"><text class="colorxing">*</text>上传代码:</view>
+        <image src="../../images/plus.png" class="codeimg" bindtap="selectcode" hidden='{{hidSelectCode}}'></image>
+        <view class="label" hidden="{{hidFileName}}">{{fileName}}</view>
+  </view>
+
+
+
+    <view class="row-wrap-follow">
+        <view class="label3"><text class="colorxing">*</text>功能详述:</view>
+    </view>
+
+    <view class="row-wrap-teaxarea">
+        <textarea  maxlength="300" name="content" />
+    </view>
+
+    <button type="primary" class="save-btn" formType="submit">提交</button>
+    <button type="default" class="cancel-btn" bindtap="goBack">取消</button>
+    
+   </view>
+  </form>
+</view>

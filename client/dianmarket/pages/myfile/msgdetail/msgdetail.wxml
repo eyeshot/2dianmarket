@@ -1,0 +1,94 @@
+
+
+<view class="search">  
+  
+  <view class="search-result">  
+    <scroll-view scroll-y class='scroll' style='height:{{height}}px'>
+    <block wx:if="{{!isMyMsg}}">
+      <view class="result-item" >  
+          <view class="leftcontent">
+          <image src="{{headimg}}" class="header"></image> 
+          </view>   
+          <view class="rightcontent">
+              <text class="title">{{title}}</text>  
+              <text class="desc">{{content}}</text> 
+          </view>
+      </view>  
+    </block>  
+
+    <block wx:if="{{isMyMsg}}">
+    <view class="result-myitem" >  
+      <view style='display: flex; justify-content: flex-end'>
+          <view class="leftcontent">
+              <text class="mytitle">{{title}}</text>  
+              <text class="desc">{{content}}</text> 
+          </view>   
+          <view class="rightcontent">
+            <image src="{{headimg}}" class="header"></image>   
+          </view>
+       </view>   
+      </view> 
+    </block>
+
+      <view class="result-item2" wx:for="{{list}}" wx:key="unique"  data-id="{{item.id}}">  
+      <block wx:if="{{item.mymsg}}">
+      
+      <view style='display: flex; justify-content: flex-end'>
+          <view class="leftcontent">
+              <text class="desc">{{item.content}}</text> 
+          </view>   
+          <view class="rightcontent">
+              <image src="{{item.headimg}}" class="header"></image>
+          </view>
+       </view>   
+       </block>   
+       <block wx:if="{{!item.mymsg}}">
+       <view style='display: flex; justify-content: flex-start'>
+           <view class="leftcontent">
+          <image src="{{item.headimg}}" class="header"></image> 
+          </view>   
+          <view class="rightcontent">
+              <text class="desc">{{item.content}}</text> 
+          </view>
+        </view>  
+       </block>
+      </view>   
+      </scroll-view>
+  
+  </view>  
+
+  
+
+  <view class="partake" hidden="{{isHiddenPart}}"> 
+    <form bindsubmit="saveReportData">
+    <view class="modal">
+
+     <view class="row-wrap-follow">
+            <view class="label"></view>
+        </view>
+
+        <view class="row-wrap-teaxarea">
+            <textarea  maxlength="300" name="content" style="height:100rpx"/>
+        </view>
+
+        <button type="primary" class="save-btn" formType="submit">提交</button>
+        <button type="default" class="cancel-btn" bindtap="cancelReport">取消</button>
+     </view>   
+     </form>
+  </view>
+
+<block wx:if="{{needReport == '1'}}">
+  <view class="bottom-btn">
+  
+    <button wx:if="{{!isMyMsg}}" type="primary" class="upload-btn" bindtap='showReport'>回复</button>
+    <button wx:elif="{{isMyMsg}}" type="primary" class="report-btn" bindtap='showReport'>回复</button>
+  
+
+    <block wx:if="{{!isMyMsg}}">
+        <button type="primary" class="confirm-btn" bindtap='preChoose' >选TA接单</button>
+    </block>
+  </view>
+</block>
+
+</view>  
+

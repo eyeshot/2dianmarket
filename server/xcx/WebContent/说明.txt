@@ -1,0 +1,12 @@
+1、系统是在Eclipse 4.4下开发，导入后发布到应用服务器，例如tomcat上即可运行。
+2、导入项目后请将项目编码设置为UTF-8，不是GBK。
+3、登录页面：http://localhost:8080/forestry/login.jsp， 用户名：admin 密码：123456。
+4、SQL在sql文件夹里，直接执行即可。
+5、applicationContext.xml配置文件里的mysql用户名是root，密码是123456；如果和你的不一样，请修改即可运行。
+
+二、数据库迁移：
+查看修改applicationContext.xml，AuthorityDaoImpl.java和SensorDataDaoImpl.java文件即可，里面有说明。
+
+ 开发详解见：http://ssyangtian.iteye.com/blog/2100794
+               
+     

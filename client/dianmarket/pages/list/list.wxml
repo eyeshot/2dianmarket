@@ -1,0 +1,34 @@
+
+<view class="search">  
+  <view class="search-bar">  
+    <view class="search-wrap" bindtap="toSearchTap">  
+      
+        <icon type="search" size="12" class="icon-search" />  
+        <view class="search-word" bindtap="keywordSearch">搜索</view> 
+    
+    </view>  
+  </view>  
+
+  <view class="search-result">  
+    
+      <view class="result-item" wx:for="{{list}}" wx:key="unique" bindtap="toDetailsTap"  data-id="{{item.id}}">  
+        <view class="icon{{item.isonly=='0' ? ' nocopyright' : ''}}"></view>  
+        <text class="title">{{item.name}}</text>  
+      </view>   
+  
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view> 
+   
+  </view>  
+
+  <view class="addInfo">
+  <navigator url="/pages/createcustom/createcustom" hover-class="navigator-hover" 
+  open-type="navigateTo">
+         <image class="addIcon"   src="../../images/ic_add.png"></image>
+  </navigator>
+  </view>
+
+
+</view>  
+

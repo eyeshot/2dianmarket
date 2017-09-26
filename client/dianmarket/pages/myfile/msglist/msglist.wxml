@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  
+ 
+  <view class="row-wraparrow" wx:for="{{list}}" wx:key="unique"  data-id="{{item.pkcode}}" bindtap='toMsgDetail'> 
+             <view class="label">{{item.title}}</view>
+             <block wx:if="{{item.isread == '0'}}">
+                 <image src="../../../images/bullet_red.png" class='itemimg'></image> 
+             </block>
+  </view>
+
+
+  
+</view>

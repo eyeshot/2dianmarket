@@ -1,0 +1,97 @@
+/* pages/detail/detail.wxss */
+
+.container{  
+ 
+  justify-content: initial;
+} 
+
+.form-box
+{
+  width:100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.save-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-bottom: 10rpx;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    font-size: 11pt;
+    background-color: #e64340;
+    color:#fff;
+    margin-top: 100rpx
+}
+
+.detail-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-bottom: 30rpx;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    font-size: 11pt;
+    background-color: #e64340;
+    color:#fff;
+    margin-top: 15rpx
+}
+
+button[type="default"]{
+    background-color: #ffffff;
+    color:#000;
+}
+
+.row-wrap-img  
+{
+  width:150rpx;
+  height:150rpx;
+  line-height: 40rpx;
+  margin-left: 30rpx;
+  padding-top: 60rpx;
+  font-size: 11pt;
+  margin:0 auto;
+} 
+
+.row-wrap-money
+{
+  width:100rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  display: flex;
+  font-size: 11pt;
+  margin:0 auto;
+  text-align: center;
+  padding-top: 50rpx;
+}  
+
+.money-label
+{
+  color: #000;
+  
+}
+
+.row-wrap-remark
+{
+  width:500rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  display: flex;
+  font-size: 11pt;
+  margin:0 auto;
+  text-align: center;
+  padding-top: 20rpx;
+} 
+
+.remark-label
+{
+  color: #D3D3D3;
+  
+}
+
+

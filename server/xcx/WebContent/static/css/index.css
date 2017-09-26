@@ -1,0 +1,663 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: #666;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+img{
+  border: none;
+}
+
+.full-container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 740px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: row;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+  height: 0;
+}
+
+.boxshadow {
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  height: 54px;
+  line-height: 54px;
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+  background-color: #09bb07;
+  border-radius: 10px;
+  cursor: pointer;
+    width: 284px;
+}
+
+
+
+.login-btn {
+    height: 54px;
+    line-height: 54px;
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    background-color: #09bb07;
+    border-radius: 10px;
+    cursor: pointer
+    width: 284px;
+}
+
+header {
+  height: 80px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+header h1 {
+  padding-top: 10px;
+}
+
+
+/*  login */
+
+.login {
+  width: 310px;
+  margin: 182px auto 0;
+  padding: 0 25px 52px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.login-title {
+  line-height: 60px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666666;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.login-qrcode {
+  margin: 25px 17px 20px;
+  border: 1px solid #ededed;
+  padding: 10px;
+  width: 226px;
+  height: 226px;
+}
+
+.login-qrcode img {
+  width: 226px;
+  height: 226px;
+}
+
+.login-desc {
+  color: #999;
+    margin-top: 10px;
+}
+
+
+/* upload */
+
+.upload {
+  padding: 25px;
+  width: 740px;
+  margin: 68px auto 0;
+  border-radius: 10px;
+}
+
+.user-info {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.user-info .img {
+  float: left;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.nc-avatar-bg{
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.nc-avatar-img{
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.user-info .info {
+  margin-left: 10px;
+  float: left;
+}
+
+.user-info .info h3 {
+  font-size: 20px;
+  font-weight: 200;
+  color: #000;
+  margin: 3px 0;
+}
+
+.user-info .info p {
+  color: #999;
+}
+
+.logout{
+  float: right;
+  margin-top: 10px;
+}
+.logout a{
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  color: #09bb07;
+  border: 1px solid #09bb07;
+  border-radius: 5px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.upload-wrapper {
+  height: 350px;
+  overflow: hidden;
+}
+
+
+/* 添加文件 */
+
+.add-file {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.add-file a {
+  position: relative;
+  line-height: 50px;
+}
+
+.add-file input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.add-file p {
+  color: #bfbfbf;
+  margin-top: 10px;
+}
+
+.add-file span {
+  font-size: 38px;
+  vertical-align: -6px;
+  margin-right: 4px;
+}
+
+
+/* 选择文件 */
+
+.file-list {
+  margin-left: -20px;
+  height: 316px;
+}
+
+.file-list li {
+  cursor: pointer;
+  float: left;
+  text-align: center;
+  width: 122px;
+  height: 128px;
+  border: 1px solid #e5e5e5;
+  background: #fcfcfc;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 30px 0 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-list .img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #dadfe6;
+  border-radius: 2px;
+  margin-top: 22px;
+}
+
+.file-list img {
+  width: 38px;
+  height: 38px;
+}
+
+.file-list p {
+  margin: 5px 0;
+  color: #000;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-list span {
+  color: #666;
+}
+
+.file-list .trash {
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background-color: #09bb07;
+  background-image: url('../images/trash.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.file-list .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  -ms-transition: width 1s ease;
+  -o-transition: width 1s ease;
+  transition: width 1s ease;
+  background-color: #5cb85c;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+
+.file-list li:hover {
+  border-color: #09bb07;
+}
+
+.select-file li:hover .trash {
+  display: block;
+}
+
+.file-list .add:hover {
+  border-color: #e5e5e5;
+}
+
+.file-list .add a {
+  display: block;
+  padding-top: 26px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.file-list .add input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.file-list .add img {
+  width: 45px;
+  height: 45px;
+}
+
+.file-list .add p {
+  color: #bfbfbf;
+  margin-top: 10px;
+}
+
+.file-list li.success {
+  border-color: #09bb07;
+}
+
+.file-list li.fail {
+  border-color: #e64340;
+}
+
+.file-list li .mask {
+  display: none;
+}
+
+.file-list li.fail .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  text-align: center;
+  padding-top: 48px;
+}
+
+.file-list li.fail .mask p {
+  border: 1px solid #fff;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  width: 80px;
+  border-radius: 30px;
+}
+
+.file-list li.fail:hover .mask {
+  display: block;
+}
+
+.file-list li.success .status,
+.file-list li.fail .status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 33px;
+  height: 33px;
+  background-image: url('../images/status.png');
+  background-repeat: no-repeat;
+}
+
+.file-list li.success .status {
+  background-position: 0 0;
+}
+
+.file-list li.fail .status {
+  background-position: 0 -33px;
+}
+
+
+/* 文件路径 */
+
+.upload-path {
+  margin-top: 10px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.upload-path span {
+  display: inline-block;
+  width: 208px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  color: #999;
+  padding: 0 10px;
+  margin: 0 8px;
+  text-align: left;
+  vertical-align: middle;
+  overflow: hidden; 
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+}
+
+.upload-path button {
+  width: 60px;
+  color: #09bb07;
+  border: 1px solid #09bb07;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.upload-path p{
+  line-height: 24px;
+  color: #bfbfbf;
+  margin-top: 10px;
+}
+
+.upload-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/*上传成功*/
+
+.upload-success {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.upload-success img {
+  width: 268px;
+  height: 147px;
+}
+
+.upload-success p {
+  font-size: 16px;
+  margin: 20px 0 50px;
+}
+
+.tree {
+  cursor: pointer;
+}
+
+.tree ul {
+  padding-left: 24px;
+}
+
+.tree li {
+  line-height: 28px;
+  /*width: 328px;*/
+}
+
+.tree li .name {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 0 5px;
+  /*width: 278px;*/
+  display: inline-block;
+}
+.tree li > div{
+  white-space: nowrap;
+}
+
+.tree li img {
+  vertical-align: -4px;
+}
+
+.tree li.active > div .name {
+  background: #09bb07;
+  color: #fff;
+}
+.tree-operator{
+  display: inline-block;
+  width: 10px;
+  height: 28px;
+}
+.tree-open,
+.tree-close{
+  width: 0;
+  height: 0;
+  display: inline-block;
+}
+.tree-open {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #7f8389;
+}
+
+.tree-close {
+  border-top: 5px solid transparent;
+  border-left: 5px solid #7f8389;
+  border-bottom: 5px solid transparent;
+}
+
+.modal-box {
+  width: 100%;
+  min-width: 740px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .5)
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  margin-left: -174px;
+  margin-top: -210px;
+  width: 348px;
+  /*height: 420px;*/
+  border-radius: 10px;
+}
+
+.modal-hd {
+  height: 58px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-title {
+  line-height: 57px;
+  font-size: 18px;
+  color: #666;
+  text-indent: 20px;
+}
+
+.modal-bd {
+  height: 276px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.modal-bd::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+.modal-bd::-webkit-scrollbar-thumb{
+  background:#e5e5e5;
+  border-radius:4px;
+}
+
+.modal-ft {
+  padding: 10px;
+  /*height: 86px;*/
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-ft .upload-path{
+  margin-top: 0;
+  text-align: left;
+}
+
+.modal-btn-group {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.modal-btn-group button {
+  width: 70px;
+  height: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.modal-btn_cancel {
+  color: #666;
+  border-color: #b4b4b4;
+}
+
+.modal-btn_primary {
+  color: #fff;
+  border-color: #09bb07;
+  background-color: #09bb07;
+}
+
+/* 错误提示 */
+.tip-box{
+  position: absolute;
+  top: 78px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.tip{
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+.tip.error{
+  background: #f76260;
+  color: #fff;
+}
+.tip.error span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  vertical-align: 0px;
+  color: #f76260;
+  text-indent: 1px;
+  line-height: 16px;
+  border-radius: 16px;
+  margin-right: 5px;
+}
+
+.file-info
+{
+    text-align: center;
+    margin-top:10px;
+}
+
+.file-info .file-item
+{
+    text-align: left;
+
+}

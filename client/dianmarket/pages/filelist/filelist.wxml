@@ -1,0 +1,26 @@
+
+<view class="search">  
+ 
+  <view class="search-result">  
+    
+      <view class="result-item" wx:for="{{list}}" bindtap='selectFile' wx:key="unique" data-id="{{index}}" 
+      data-key="{{item.id}}" data-name="{{item.name}}">  
+         
+        <text class="title">{{item.name}}</text>  
+        <text class="time">({{item.createtime}})</text>  
+        <image src="../../images/check.png" style='display:{{isHidden[index]}}' class='checkimg' ></image>
+
+      </view>   
+  
+
+    <view class="loading">下拉刷新</view>  
+   
+  </view>  
+ 
+  <view class="bottom-btn">
+    <button type="primary" class="upload-btn" bindtap='gotoFileDes'>上传文件</button>
+    <button type="primary" class="confirm-btn" bindtap='confirm' >确定</button>
+  </view>
+
+</view>  
+

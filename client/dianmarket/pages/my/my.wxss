@@ -1,0 +1,102 @@
+/**index.wxss**/
+.container {
+  padding: 10px 0px;
+  
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:0 auto;
+  padding-bottom: 40rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.info {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.row-wraparrow1
+{
+  width:95%;
+  height:88rpx;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #C9C9C9; 
+  border-top: 1rpx solid #C9C9C9;
+  display: flex;
+  font-size: 11pt;
+  margin-left: 25rpx;
+  margin-right: 40rpx;
+  background: url(https://www.2dian.com/xcx/static/img/arrow-right.png) no-repeat right;
+  background-size:20rpx 30rpx;
+}
+
+.row-wraparrow2
+{
+  width:95%;
+  height:88rpx;
+  line-height: 88rpx;
+  border-bottom: 1rpx solid #C9C9C9;
+  display: flex;
+  font-size: 11pt;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  background: url(https://www.2dian.com/xcx/static/img/arrow-right.png) no-repeat right;
+  background-size:20rpx 30rpx;
+}
+
+.itemimg
+{
+  border-radius: 5rpx; 
+  width: 30rpx;
+  height: 30rpx;
+  text-align: right;
+  padding-top: 10rpx;
+  padding-right: 5rpx;
+  margin-top:18rpx;
+}
+
+.row-wraparrowBtn
+{
+  width:95%;
+  height:88rpx;
+  line-height: 88rpx;
+  padding-left: 0rpx;
+  border: none;
+  display: flex;
+  font-size: 11pt;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  background: url(https://www.2dian.com/xcx/static/img/arrow-right.png) no-repeat right;
+  background-size:20rpx 30rpx;
+}
+
+.row-wraparrowBtn:after
+{
+   border: none;
+}
+
+.row-line 
+{
+  width:100%;
+  border-bottom: 1rpx solid #C9C9C9;
+  margin-left: 30rpx;
+}
+
+.row-wraparrow .label-right
+{
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: left;
+  margin-left: 50rpx;
+  font-size: 32rpx;
+}

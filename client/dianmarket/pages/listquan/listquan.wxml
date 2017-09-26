@@ -1,0 +1,93 @@
+
+<view class="search">  
+  <view class="search-bar">  
+    <view class="search-wrap" bindtap="toSearchTap">  
+      
+        <icon type="search" size="12" class="icon-search" />  
+        <view class="search-word" bindtap="keywordSearch">搜索</view> 
+    
+    </view>  
+  </view>  
+
+  <view class="search-result">  
+    
+      <view class="result-item" wx:for="{{list}}" wx:key="unique"  data-id="{{item.id}}">  
+        <view class="leftcontent">
+           <image src="../../images/logo.jpeg" class="header"></image> 
+        </view>  
+
+        <view class="rightcontent"> 
+             <text class="title">购票参与6周年店庆狂欢领取多款限定</text>  
+             <view class="contentimg"> 
+                <image src="../../images/pay_on.png" class="image"></image>
+                <image src="../../images/pay_on.png" class="image"></image>
+                <image src="../../images/pay_on.png" class="image"></image>
+                <image src="../../images/pay_on.png" class="image"></image>
+             </view>
+
+             <view class="operate"> 
+                <text class="timeline">2天前</text> 
+                <view class="operatedetail" animation="{{source[index]}}" style="display:{{isHidden[index]}}" >
+                    <view class="operateItem">
+                       <image src="../../images/rank_on.png" class="operateitemimg"></image>
+                       <text class="operateitemword">打赏</text> 
+                    </view>
+                    <view class="operateItem">
+                       <image src="../../images/rank_on.png" class="operateitemimg"></image>
+                       <text class="operateitemword">点赞</text> 
+                    </view>
+                    <view class="operateItem">
+                       <image src="../../images/rank_on.png" class="operateitemimg"></image>
+                       <text class="operateitemword">评论</text> 
+                    </view>
+                </view>
+                <image src="../../images/rank_on.png" class="operateimg" data-id="{{index}}"
+                 bindtap="showOperate"></image>
+             </view>
+
+             <view class="comment"> 
+                <view class="love"> 
+                     <image src="../../images/rank_on.png" class="lovesign"></image>
+                     <view class="loveheader"> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                         <image src="../../images/logo.jpeg" class="loveimg"></image> 
+                     </view>
+                </view>
+                <text class="loveline"> </text>
+                 <view class="dialog"> 
+                    <text class="dialogtext">张三：你好</text> 
+                    <text class="dialogtext">张三：你好</text> 
+                    <text class="dialogtext">张三：你好</text> 
+                 </view>
+                
+             </view>
+              
+        </view>
+      </view>   
+  
+
+    <view class="loading" hidden="{{!searchLoading}}">正在载入更多...</view>  
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view> 
+   
+  </view>  
+
+  <view class="addInfo">
+  <navigator url="/pages/createcustom/createcustom" hover-class="navigator-hover" 
+  open-type="navigateTo">
+         <image class="addIcon"   src="../../images/ic_add.png"></image>
+  </navigator>
+  </view>
+
+
+</view>  
+

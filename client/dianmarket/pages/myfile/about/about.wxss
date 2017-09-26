@@ -1,0 +1,67 @@
+/* pages/detail/detail.wxss */
+
+.container{  
+ 
+  justify-content: initial;
+} 
+
+.form-box
+{
+  width:100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+} 
+
+
+
+.save-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-bottom: 30rpx;
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    font-size: 11pt;
+    background-color: #e64340;
+    color:#fff;
+    margin-top: 400rpx
+}
+
+button[type="default"]{
+    background-color: #ffffff;
+    color:#000;
+}
+
+.row-wrap-center
+{
+  width:95%;
+  height:40rpx;
+  line-height: 40rpx;
+  margin-top: 30rpx;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.row-wrap-remark
+{
+  width:95%;
+  height:40rpx;
+  line-height: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  font-size: 11pt;
+}
+
+.row-wrap-des
+{
+  width:95%;
+  height:100rpx;
+  line-height: 40rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: flex;
+  font-size: 11pt;
+  margin-bottom: 100rpx;
+}

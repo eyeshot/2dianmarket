@@ -1,0 +1,12 @@
+
+<!--pages/lab/lab.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
+
+<view style="padding: 0 30px; border-bottom:1px solid #eee;">
+  <template is="wxParse" data="{{wxParseData:aHrefHrefData.nodes}}" />
+</view>
+
+
+
+

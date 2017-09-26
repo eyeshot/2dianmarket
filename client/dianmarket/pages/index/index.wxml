@@ -1,0 +1,21 @@
+<!--index.wxml-->  
+<view class="container">  
+
+  <view class="status-box">
+    <view bindtap="statusTap" class="status-label {{index==currentStatus ? 'active':''}}" wx:for="{{groupArr}}" 
+    data-index='{{index}}'>
+       {{item.name}}
+    </view>
+ </view>
+
+  <view class="weui-grids">  
+    <view class="weui-grid" style="width: {{itemWidth}}px" wx:for="{{routers}}" wx:key="name">  
+      <navigator url="/pages/listquan/listquan?typeID={{item.id}}">  
+        <view class="weui-grid__icon">  
+          <image src="{{item.img}}" mode="scaleToFill" />  
+        </view>  
+        <text class="weui-grid__label">{{item.name}}</text>  
+      </navigator>  
+    </view>  
+  </view>  
+</view> 

@@ -1,0 +1,30 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container">  
+
+ 
+  <view class="form-box">
+
+  <view class="row-wrap-center">
+        关于两点市场
+    </view>
+    
+
+    <view class="row-wrap-remark">
+        <view class="label">第一点:</view>
+    </view>
+
+    <view class="row-wrap-des">
+         可以在发包区发布自己的需求：包括外包整个项目或单独的功能，例如，我要外包一个商城小程序项目或我要外包一个某种特效的功能。
+    </view>
+
+    <view class="row-wrap-remark">
+        <view class="label">第二点:</view>
+    </view>
+
+    <view class="row-wrap-remark">
+        <view class="des"> 可以在代码区售卖自己的代码：包括整个项目的代码或单独某个功能的代码，例如，我要出售以前的一个小商城项目代码或我要出售一个带有特效的列表功能。</view>
+    </view>
+    
+   </view>
+</view>

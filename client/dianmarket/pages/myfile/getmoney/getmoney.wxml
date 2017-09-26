@@ -1,0 +1,16 @@
+<!--pages/detail/detail.wxml-->
+
+<view class="container">  
+
+ 
+  <view class="form-box">
+
+    <view class="row-wrap-money">
+        <view class='label'>提现金额:</view>
+        <input class='input' name='getmoney' bindinput='inputMoney' value='{{haveMoney}}'></input>
+    </view>
+
+    <button type="primary" class="save-btn" bindtap='beginCache' disabled="{{cashBtnDisable}}">开始提现</button>
+    
+   </view>
+</view>
